@@ -41,15 +41,29 @@
 		<div class="col-lg-4"></div>
 		<div class="col-lg-4">
 			<div class="jumbotron" style="padding-top: 20px;">
-				<form method="post" action="loginAction.jsp">
-					<h3 style="text-align: center;">Welcome!</h3>
+				<form method="post" action="joinAction.jsp">
+					<h3 style="text-align: center;">Sing Up!</h3>
 					<div class="form-group">
 						<input type="text" class="form-control" placeholder="ID" name="userID" maxlength="20">
 					</div>
 					<div class="form-group">
 						<input type="password" class="form-control" placeholder="Password" name="userPassword" maxlength="20">
 					</div>
-					<input type="submit" class="btn btn-primary form-control" value="login">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Name" name="userName" maxlength="20">
+					</div>
+					<div class="form-group" style="text-align: center;">
+						<label class="btn btn-primary active">
+							<input type="radio" name="userGender" autocomplete="off" value="male" checked>Male
+						</label>
+						<label class="btn btn-primary">
+							<input type="radio" name="userGender" autocomplete="off" value="female" checked>Female
+						</label>
+					</div>
+					<div class="form-group">
+						<input type="email" class="form-control" placeholder="email" name="userEmail" maxlength="20">
+					</div>
+					<input type="submit" class="btn btn-primary form-control" value="SingUp">
 				</form>
 			</div>
 		</div>
