@@ -45,7 +45,7 @@ public class UserDAO {
 	}
 	
 	public int join(User user) { //사용자를 입력받음
-		String SQL = "INSERT INTO USER VALUES (?, ?, ?, ?, ?)";
+		String SQL = "INSERT INTO USER VALUES (?, ?, ?, ?, ?, ?)";
 		try {
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, user.getUserID());

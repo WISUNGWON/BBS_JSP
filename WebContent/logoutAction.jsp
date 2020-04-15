@@ -3,10 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>JSP Web Site</title>
-</head>
+</head> 
 <body>
+	<%
+		session.invalidate();
+	%>
 	<script>
 		location.href = 'main.jsp';
 	</script>

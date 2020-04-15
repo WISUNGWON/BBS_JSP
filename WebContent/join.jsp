@@ -30,8 +30,8 @@
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">Enter<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li class="active"><a href="login.jsp">Login</a></li>
-						<li><a href="join.jsp">SignUp</a></li>
+						<li><a href="login.jsp">Login</a></li>
+						<li class="active"><a href="join.jsp">SignUp</a></li>
 					</ul>
 				</li>
 			</ul>

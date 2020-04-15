@@ -13,10 +13,22 @@
 <title>JSP Web Site</title>
 </head> 
 <body>
-	<%
+	<%	
+		String userID = null;
+		if (session.getAttribute("userID") != null){
+			userID = (String) session.getAttribute("userID");
+		}
+		if (userID != null) {
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('이미 로그인이 되어있습니다.')");
+			script.println("location.href = 'main.jsp'");
+			script.println("</script>");
+		}
 		UserDAO userDAO = new UserDAO();
 		int result = userDAO.login(user.getUserID(), user.getUserPassword());
 		if (result == 1){ // 로그인 정보가 맞으면 자바스크립트를 실행하여 페이지를 이동시킴
+			session.setAttribute("userID", user.getUserID());
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("location.href = 'main.jsp'");	
